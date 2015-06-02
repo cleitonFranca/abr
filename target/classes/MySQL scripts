@@ -1,0 +1,38 @@
+Before starting the application:
+Install MySQL.
+Connect it with Eclipse.
+Create the database in MySQL:
+
+CREATE DATABASE login;
+
+Switch to it:
+
+USE login;
+
+Create table "users":
+
+CREATE TABLE users
+(
+    userId          INT AUTO_INCREMENT,
+    username        VARCHAR(20) NOT NULL,
+    password        VARCHAR(20) NOT NULL,
+    firstName       VARCHAR(20),
+    lastName        VARCHAR(20),
+    PRIMARY KEY     (userId)
+);
+
+Make sure it has been created:
+
+SHOW TABLES;
+
+Insert a user for testing:
+
+INSERT INTO users ( username, password, firstName, lastName )
+                  	VALUES
+                  ( "username", "password", "Martin", "Stoyanov" );
+                  
+Check that it has been inserted:
+
+SELECT * FROM users;
+                  
+Now the application is ready to run.
